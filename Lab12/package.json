@@ -1,0 +1,30 @@
+{
+  "name": "proyecto_1",
+  "version": "1.0.0",
+  "description": "Proyecto 1 DAW",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodolfiux/Nanahue.git"
+  },
+  "keywords": [
+    "DAW"
+  ],
+  "author": "Rodolfo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rodolfiux/Nanahue/issues"
+  },
+  "homepage": "https://github.com/Rodolfiux/Nanahue#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
