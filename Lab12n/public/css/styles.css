@@ -1,0 +1,4 @@
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: #6c8f7293 !important;
+}
