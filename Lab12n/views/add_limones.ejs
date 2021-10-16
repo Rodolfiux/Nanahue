@@ -1,0 +1,31 @@
+
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+<main class="container">
+
+    <div class="row">
+                <div class="col s12 m6 l4">
+
+                    <h1>Agregar Limones al arbol</h1>
+                    <form action="/limonera/agregar" method="POST">
+                    <label for="nombre">Tipo de Lemon: </label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Limon Persa" required>
+                    <br/>
+                    <br/>
+                    <label for="descripcion">Descripción del limon: </label>
+                    <input type="text" id="descripcion" name="descripcion" placeholder="Es un limon de origen...">
+                    <br/>
+                    <br/>
+                    <input type="submit" id="enviar" name="enviar" value="Enviar">
+                    </form>
+                    
+                    
+                </div>
+    </div>
+
+
+</main>
+
+
+
+
