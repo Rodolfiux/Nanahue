@@ -24,10 +24,14 @@
                             Tienda
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                            <li><a class="dropdown-item" href="#">Iniciar sesion</a></li>
+                            <% if( isLoggedIn ) { %>
+                                <li>Hola <%= username %> </li>
                             <li><a class="dropdown-item" href="#">Carrito</a></li>
                             <li><a class="dropdown-item" href="agregar">Agregar</a></li>
-
+                            <li><a class="dropdown-item" href="/users/logout">Cerrar sesion</a></li>
+                            <% } else { %>
+                            <li><a class="dropdown-item" href="/users/login">Iniciar sesion</a></li>    
+                            <% } %>
                         </ul>
                     </li>
                     <li class="nav-item">
