@@ -1,3 +1,8 @@
+const db = require('../util/database');
+
+
+
+
 const limones = [
     {nombre: "Limon agrio", descripcion:"Muy agrio",imagen: "https://ojo.pe/resizer/sf4bkkPAxXsqBwnCMRFu5IhMkU4=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/HPV7XJCGXNCE5OQIC2FX2667Q4.jpg"},
     {nombre: "Limon persa", descripcion:"De persa",imagen: "https://fagro.mx/img/cultivos/limn-persa.png"},
@@ -18,13 +23,20 @@ module.exports = class Limon {
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        limones.push(this)
+        return db.execute('INSERT INTO limones (nombre, descripcion, imagen) VALUES (?, ?, ?)',
+        [this.nombre, this.descripcion, this.imagen]);
         
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
-    static fetchAll() {
-        return limones;
+    static fetchAll(id) {
+        if (id == undefined) {
+            return db.execute('SELECT * FROM limones');
+        } else {
+            return db.execute('SELECT * FROM limones WHERE id = ?', [id]);
+        }
+        
+        
         
     }
 

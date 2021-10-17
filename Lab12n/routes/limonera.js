@@ -5,6 +5,7 @@ const router = express.Router();
 
 const limoneraController = require('../controllers/limonera_controller');
 
+router.get('/list/:limon_id', limoneraController.getlist);
 
 router.get('/list', limoneraController.getlist);
 
